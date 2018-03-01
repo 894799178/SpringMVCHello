@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+    <!-- 使用@Controller注解所使用的配置-->
+    <!--Spring会自动扫描base-package路径下的包或子包.
+        如果扫描到Spring相关的注解声明的类,那么这些类将会注册成Spring的bean-->
+    <context:component-scan base-package="com.springmvc.hello"></context:component-scan>
+
+    <!--配置annotation类型的处理映射器.-->
+    <bean class ="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+
+    <!--配置annotation类型的处理器适配器-->
+    <bean class = "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+    <!--视图解析器-->
+    <bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver"/>
+
+    <!--
+     实现Controller接口使用的是这个配置
+    配置handle,映射"/hello" 请求
+    <bean name="/hello" class = "com.springmvc.hello.HelloController"/>
+
+    <处理映射器将beawn的name作为url进行查找,需要配置handle时指定name (即url)
+    <bean class ="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+    SimpleControllerHandleAdapter是一个处理器适配器,所有处理适配器都要实现handlerAdapter接口
+    <bean class = "org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+    视图解析器
+    <bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver"/>
+    -->
+</beans>
