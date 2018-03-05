@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * HelloController 是一个Controller接口的控制器
+ * XMLForHelloController 是一个Controller接口的控制器
  * 可以处理单一的请求动作.
  * 测试使用的配置文件springmcv-config.xml
  */
-public class HelloController implements Controller {
-    private static final Log logger = LogFactory.getLog(HelloController.class);
+public class XMLForHelloController implements Controller {
+    private static final Log logger = LogFactory.getLog(XMLForHelloController.class);
     @Override
     public ModelAndView handleRequest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
         logger.info("handleRequest被调用");

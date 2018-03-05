@@ -22,7 +22,7 @@
     <!--
      实现Controller接口使用的是这个配置
     配置handle,映射"/hello" 请求
-    <bean name="/hello" class = "com.springmvc.hello.HelloController"/>
+    <bean name="/hello" class = "com.springmvc.hello.XMLForHelloController"/>
 
     <处理映射器将beawn的name作为url进行查找,需要配置handle时指定name (即url)
     <bean class ="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
