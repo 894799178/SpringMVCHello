@@ -16,6 +16,7 @@ import javax.xml.ws.RequestWrapper;
 /**
  * HelloController2 是通过注释类型来声明控制器
  * 可以处理单一的请求动作.
+ * 测试所用的配置文件 SpringMVC-Conifg2.xml
  */
 //@Controller
 public class HelloController2  {

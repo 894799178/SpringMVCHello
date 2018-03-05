@@ -9,8 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * HelloController2 是通过注释类型来声明控制器
- * 可以处理单一的请求动作.
+ * 该类用来说明reques
+ *
+ *
  */
 @Controller
 public class HelloController3 {
@@ -22,7 +23,7 @@ public class HelloController3 {
      * @return
      * @throws Exception
      */
-    @RequestMapping(value="/hello")
+    @RequestMapping("")
     public ModelAndView hello2(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
         logger.info("handleRequest被调用");
           ModelAndView modelAndView=new ModelAndView();

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * HelloController 是一个Controller接口的控制器
  * 可以处理单一的请求动作.
+ * 测试使用的配置文件springmcv-config.xml
  */
 public class HelloController implements Controller {
     private static final Log logger = LogFactory.getLog(HelloController.class);
